@@ -18,3 +18,8 @@ char ten_thanh_pho[SO_THANH_PHO][20] = {
     "Hoa Binh"
 };
 
+typedef struct {
+    int so_luong_dinh;
+    int ma_tran_ke[SO_THANH_PHO][SO_THANH_PHO];
+} DoThi;
+
