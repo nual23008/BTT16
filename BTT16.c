@@ -23,3 +23,17 @@ typedef struct {
     int ma_tran_ke[SO_THANH_PHO][SO_THANH_PHO];
 } DoThi;
 
+void khoi_tao_do_thi(DoThi *do_thi) {
+    int i, j;
+    do_thi->so_luong_dinh = SO_THANH_PHO;
+    for (i = 0; i < do_thi->so_luong_dinh; i++) {
+        for (j = 0; j < do_thi->so_luong_dinh; j++) {
+            if (i == j) {
+                do_thi->ma_tran_ke[i][j] = 0;
+            } else {
+                do_thi->ma_tran_ke[i][j] = VO_CUC;
+            }
+        }
+    }
+}
+
